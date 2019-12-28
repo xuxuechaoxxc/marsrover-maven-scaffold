@@ -21,6 +21,6 @@ public class RoverCon {
                 rover.move();
             }
         }
-            return rover.getPosition();
-        }
+        return rover.getPosition();
     }
+}
