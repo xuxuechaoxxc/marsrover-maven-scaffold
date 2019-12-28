@@ -5,7 +5,6 @@ public class Rover {
     public static final String SOUTH = "S";
     private String e;
     private Area area;
-
     public void land(Area area, int x, int y, String e) {
         if (x > area.getX()) {
             throw new IllegalArgumentException("x=" + x + " is out of area width " + area.getX());
@@ -50,7 +49,6 @@ public class Rover {
         }
         return;
     }
-
     public void turnRight() {
         if (e.equals(EAST)) {
             e = SOUTH;

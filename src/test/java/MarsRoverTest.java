@@ -8,7 +8,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
 public class MarsRoverTest {
 
     @Test
-    public void shouldLandTheRoverOnArea() {
+    public void shouldLandTheRoverOnArea(){
         Area area = new Area(10, 10);
         Rover rover = new Rover();
         rover.land(area, 5, 5, Rover.EAST);
@@ -17,8 +17,7 @@ public class MarsRoverTest {
     }
 
     @Test
-
-    public void shouldMoveForwardWhenDirectionToEast() {
+    public void shouldMoveForwardWhenDirectionToEast(){
         Area area = new Area(10, 10);
         Rover rover = new Rover();
         rover.land(area, 5, 5, Rover.EAST);
@@ -28,7 +27,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void shouldTurnLeft() {
+    public void shouldTurnLeft(){
         Area area = new Area(10, 10);
         Rover rover = new Rover();
         rover.land(area, 5, 5, Rover.EAST);
@@ -38,7 +37,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void name() {
+    public void name(){
         Rover rover = new Rover();
         RoverCon roverCon = new RoverCon();
         String mission = "10,10,5,5,E,M,L,M,R";
@@ -50,11 +49,12 @@ public class MarsRoverTest {
     public ExpectedException exceptedException = ExpectedException.none();
 
     @Test
-    public void shouldWarningWhenLandOutOfArea() {
+    public void shouldWarningWhenLandOutOfArea(){
         exceptedException.expect(IllegalArgumentException.class);
         exceptedException.expectMessage("x=20 is out of area width 10");
-        Area area = new Area(10, 10);
+        Area area = new Area(10,10);
         Rover rover = new Rover();
-        rover.land(area, 20, 30, Rover.SOUTH);
+        rover.land(area,20,30, Rover.SOUTH);
     }
 }
+
